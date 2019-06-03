@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="60dp"
+        android:layout_height="65dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="85dp"
+        android:src="@drawable/logintitle" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/icon"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/icon"
+        android:text="泰安市泰安区残疾人联合会"
+        android:textSize="19sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/icon"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/icon"
+        android:text="http://www.tsqcl.org/index.asp"
+        android:textSize="13sp" />
+
+    <EditText
+        android:id="@+id/login_account"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:layout_below="@+id/icon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/shape_edit"
+        android:gravity="center"
+        android:hint="请输入账号"
+        android:textSize="17sp" />
+
+    <EditText
+        android:id="@+id/login_passWord"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:layout_below="@+id/login_account"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_edit"
+        android:gravity="center"
+        android:hint="请输入密码"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:layout_below="@id/login_passWord"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/shape_text"
+        android:gravity="center"
+        android:text="登录"
+        android:textColor="@color/white"
+        android:textSize="17sp" />
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_register"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignLeft="@+id/btn_login"-->
+    <!--android:layout_below="@+id/btn_login"-->
+    <!--android:layout_marginTop="20dp"-->
+    <!--android:text="立即注册"-->
+    <!--android:textColor="@color/black"-->
+    <!--android:textSize="13sp" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_forgot"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignRight="@+id/btn_login"-->
+    <!--android:layout_below="@+id/btn_login"-->
+    <!--android:layout_marginTop="20dp"-->
+    <!--android:text="忘记密码"-->
+    <!--android:textColor="@color/black"-->
+    <!--android:textSize="13sp" />-->
+
+</RelativeLayout>

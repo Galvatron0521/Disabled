@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/item_toolbar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_portrait"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/user_icon" />
+
+        <TextView
+            android:id="@+id/tv_userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/img_portrait"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/img_portrait"
+            android:text="用户名字"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/img_portrait"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/img_portrait"
+            android:text="时间"
+            android:textColor="#999999"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_time"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="@dimen/dp_10"
+            android:textColor="@color/black"
+            android:textSize="13sp" />
+
+        <View
+            android:id="@+id/View"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/tv_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="#eeeeee" />
+
+        <ImageView
+            android:id="@+id/commentTxt"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/View"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/comm" />
+
+        <TextView
+            android:id="@+id/tv_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/supportTxt"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_toEndOf="@+id/commentTxt"
+            android:text="评论数量"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/supportTxt"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/View"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/tv_comment"
+            android:src="@drawable/zan" />
+
+        <TextView
+            android:id="@+id/tv_support"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/supportTxt"
+            android:layout_alignTop="@+id/supportTxt"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_toRightOf="@+id/supportTxt"
+            android:text="点赞数量"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@+id/tv_support"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="#eeeeee" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/commentRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tv_support"
+            android:layout_marginTop="15dp">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <include
+            layout="@layout/layout_editview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true" />
+
+    </RelativeLayout>
+
+</LinearLayout>

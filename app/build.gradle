@@ -1,0 +1,76 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.jakewharton.butterknife'
+apply plugin: 'org.greenrobot.greendao' // apply plugin
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.shenkangyun.disabledproject"
+        minSdkVersion 19
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0.1"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDir 'libs'
+            //说明so的路径为该libs路径，关联所有地图SDK的so文件
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    //注解框架
+    compile 'com.jakewharton:butterknife:8.4.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+    //BRVAH框架
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
+    //网络请求框架
+    compile 'com.zhy:okhttputils:2.6.2'
+    //json解析框架
+    compile 'com.google.code.gson:gson:2.8.1'
+    //图片加载框架
+    compile 'com.github.bumptech.glide:glide:4.1.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.1.1'
+    //卡片式布局框架
+    implementation 'com.android.support:cardview-v7:26.1.0'
+    //LitePal轻量级数据库框架
+    compile 'org.litepal.android:core:1.6.1'
+    //轮播图框架
+    compile 'com.youth.banner:banner:1.4.9'
+    //MD5加密
+    implementation files('libs/shiro-all-1.2.3.jar')
+    //列表框架
+    implementation 'com.android.support:recyclerview-v7:26.1.0'
+    //上拉加载更多框架
+    compile 'com.github.anzaizai:EasyRefreshLayout:1.3.1'
+    //圆形图片框架
+    compile 'de.hdodenhof:circleimageview:2.2.0'
+    //文本框折叠框架
+    compile 'com.ms-square:expandableTextView:0.1.4'
+    //日历框架
+    compile 'com.github.MagicMashRoom:SuperCalendar:v1.4'
+    //数据库框架
+    compile 'org.greenrobot:greendao:3.2.2'
+    //UI设计支持框架
+    implementation 'com.android.support:design:26.1.0'
+    //时间选择框架
+    compile 'com.github.codbking:PickTime:v1.0.1'
+    //滑动框架
+    compile 'com.github.anzaizai:EasySwipeMenuLayout:1.1.2'
+}

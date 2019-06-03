@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <TextView
+                android:id="@+id/top_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="2017年"
+                android:textColor="@color/head_bg"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/top_mounth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/top_year"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/top_year"
+                android:text="10月"
+                android:textColor="@color/head_bg"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp">
+
+            <TextView
+                android:id="@+id/top_jt"
+                android:layout_width="50dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/button_bg"
+                android:gravity="center"
+                android:text="今天"
+                android:textColor="@color/head_bg"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/top_sy"
+                android:layout_width="50dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/top_jt"
+                android:background="@drawable/button_bg"
+                android:gravity="center"
+                android:text="上月"
+                android:textColor="@color/head_bg"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/top_xx"
+                android:layout_width="50dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/top_sy"
+                android:background="@drawable/button_bg"
+                android:gravity="center"
+                android:text="下月"
+                android:textColor="@color/head_bg"
+                android:textSize="13sp" />
+
+
+            <ImageView
+                android:id="@+id/top_ss"
+                android:layout_width="35dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/zd_icon" />
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:background="#fff"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/weekIndicatorStyle"
+                android:text="一" />
+
+            <TextView
+                style="@style/weekIndicatorStyle"
+                android:text="二" />
+
+            <TextView
+                style="@style/weekIndicatorStyle"
+                android:text="三" />
+
+            <TextView
+                style="@style/weekIndicatorStyle"
+                android:text="四" />
+
+            <TextView
+                style="@style/weekIndicatorStyle"
+                android:text="五" />
+
+            <TextView
+                style="@style/weekIndicatorStyle"
+                android:text="六" />
+
+            <TextView
+                style="@style/weekIndicatorStyle"
+                android:text="日" />
+        </LinearLayout>
+
+        <android.support.design.widget.CoordinatorLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <com.ldf.calendar.view.MonthPager
+                android:id="@+id/calendar_view"
+                android:layout_width="match_parent"
+                android:layout_height="270dp"
+                android:background="#fff"></com.ldf.calendar.view.MonthPager>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="45dp"
+                android:background="#ffffff"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                app:layout_behavior="com.ldf.calendar.behavior.RecyclerViewBehavior" />
+            <!-- paddingBottom或者magin距离必须是MonthPager高度的1/6-->
+            <!-- RecyclerView的高度必须是MatchParent-->
+            <!-- RecyclerView的background必须是非透明-->
+        </android.support.design.widget.CoordinatorLayout>
+
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/ActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginRight="30dp"
+        android:src="@drawable/add"
+        app:backgroundTint="@color/blue"
+        app:rippleColor="@color/blue">
+
+    </android.support.design.widget.FloatingActionButton>
+
+</RelativeLayout>
